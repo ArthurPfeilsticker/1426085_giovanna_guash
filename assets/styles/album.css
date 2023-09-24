@@ -1,0 +1,12 @@
+.title h2{
+    margin: 20px auto;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#albumImage {
+    border: 2px solid #333; /* adiciona uma borda sólida de 2px com cor cinza escuro */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5); /* adiciona uma sombra com deslocamento de 5px horizontal e vertical, um desfoque de 15px e uma cor preta com 30% de opacidade */
+    border-radius: 10px; /* arredonda as bordas do carrossel */
+}

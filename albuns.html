@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One Piece</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/styles/index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+    <!-- Menu -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/">One Piece</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="album.html">Álbuns</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="item.html">Itens</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="title">
+        <h2>Lista de Álbuns</h2>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <!-- Os cards serão inseridos aqui pelo JavaScript -->
+        </div>
+    </div>
+    
+    <script src="data.js"></script>
+    <script>
+        // Seleciona a div 'row' onde os cards serão inseridos
+        const row = document.querySelector('.row');
+        
+        // Itera sobre os álbuns e cria um card para cada um
+        albums.forEach(album => {
+            const card = `
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="${album.image}" class="card-img-top" alt="${album.title}">
+                        <div class="card-body">
+                            <h5 class="card-title">${album.title}</h5>
+                            <p class="card-text truncate-text">${album.description}</p>
+                            <a href="album.html?title=${encodeURIComponent(album.title)}" class="btn btn-primary">Ver detalhes</a>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            // Adiciona o card à div 'row'
+            row.innerHTML += card;
+        });
+
+    </script>
+    
+</body>
+</html>

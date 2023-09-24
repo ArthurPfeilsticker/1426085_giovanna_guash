@@ -1,0 +1,83 @@
+#carouselExampleIndicators {
+    width: 50vh; /* ou qualquer largura que você desejar */
+    height:50%;
+    margin: 20px auto; /* centraliza o carrossel horizontalmente */
+    overflow: hidden; /* esconde qualquer conteúdo que exceda o tamanho do container */
+    border: 2px solid #333; /* adiciona uma borda sólida de 2px com cor cinza escuro */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5); /* adiciona uma sombra com deslocamento de 5px horizontal e vertical, um desfoque de 15px e uma cor preta com 30% de opacidade */
+    border-radius: 10px; /* arredonda as bordas do carrossel */
+}
+
+.title h2{
+    margin: 20px auto;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#carouselExampleIndicators .carousel-inner img {
+    max-height: 300px; /* ou qualquer altura que você desejar */
+    width: auto; /* ajusta a largura automaticamente para manter a proporção */
+    display: block; /* garante que a imagem seja exibida como um bloco */
+    margin: 0 auto; /* centraliza a imagem horizontalmente */
+}
+
+/* Estilo para os indicadores do carrossel */
+.carousel-indicators li {
+    background-color: black;
+}
+
+/* Estilo para a setinha de navegação anterior */
+.carousel-control-prev-icon {
+    background-color: black;
+    background-image: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: relative;
+}
+
+.carousel-control-prev-icon::before {
+    content: '\2039'; /* Caractere Unicode para a seta esquerda */
+    font-family: 'Arial';
+    font-size: 30px;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Estilo para a setinha de navegação próxima */
+.carousel-control-next-icon {
+    background-color: black;
+    background-image: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: relative;
+}
+
+.carousel-control-next-icon::before {
+    content: '\203A'; /* Caractere Unicode para a seta direita */
+    font-family: 'Arial';
+    font-size: 30px;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.truncate-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+iframe{
+    border: 2px solid #333; /* adiciona uma borda sólida de 2px com cor cinza escuro */
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5); /* adiciona uma sombra com deslocamento de 5px horizontal e vertical, um desfoque de 15px e uma cor preta com 30% de opacidade */
+    border-radius: 10px; /* arredonda as bordas do carrossel */
+}
